@@ -18,6 +18,7 @@
 
 <body>
 <button id="trigger">Launch the Rocket!</button>
+<h2 id="msg">Rocket is idle...</h2>
 <div id="space">
   <div id="rocket"><img src="rocket.png" height="120" alt="space rocket"/></div>
 </div>
@@ -25,14 +26,20 @@
 	
 	var rocket = document.getElementById("rocket"); 
 	var trigger = document.getElementById("trigger"); 
+	var msg = document.getElementById("msg"); 
+    var pos = 0;
+    var i = 0;
 	
 	trigger.addEventListener('click', launchRocket);
 	
 	function launchRocket() {
 		
-    alert ('Get inspired ;-\): https://www.w3schools.com/howto/howto_js_animate.asp');
-	location.href = "https://www.w3schools.com/howto/howto_js_animate.asp";
-	
+    /*alert ('Get inspired ;-\): https://www.w3schools.com/howto/howto_js_animate.asp');
+	location.href = "https://www.w3schools.com/howto/howto_js_animate.asp";)*/
+    
+    //using an anonnymous function
+    msg.innerHTML = "rocket has lift off";
+    setInterval(function(){pos++, rocket.style.bottom = pos + 'px';}, 5);	
 	}
 	
 </script>
