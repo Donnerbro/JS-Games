@@ -1,5 +1,7 @@
     var number1 = 1;
     var number2 = 11;
+    var trigger = document.getElementById("trigger");
+    var output = document.getElementById("output");
     
     // regular funtion with a return value
     function Math() {
@@ -38,6 +40,30 @@
     }
 
     var p1 = new player('Morten', 200);
-    p1.greeting();
+    //p1.greeting();
     
-    
+    //creating a m dimensional array using literal notation
+    var playerScore = [
+        ['Peter', 100],
+        ['Christine', 300],
+        ['Jacob', 200],
+        ['Steve', 400]
+    ];
+
+   // playerScore.push(['Peter', 100]);
+
+    console.log(playerScore);
+    function listPlayer(){
+        var result = '';
+            for(var x = 0 ; x < playerScore.length ; x++){
+                result += result + playerScore[x] + '<br>';
+            }
+        
+        output.innerHTML = result;
+    }
+
+    trigger.addEventListener('click', listPlayer);
+        
+        
+        
+        
