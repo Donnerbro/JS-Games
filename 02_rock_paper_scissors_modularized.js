@@ -11,7 +11,7 @@ var resultDisplay = document.getElementById("result"); // display the game resul
 // other global variables
 var computerChoice;
 var userChoice;
-var result;
+var results;
 
 // main function containing the game logic
 function play(){
